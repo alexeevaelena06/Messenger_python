@@ -1,0 +1,10 @@
+import requests
+
+print("Enter username:")
+username = input()
+while True:
+    print("Enter message:")
+    text = input()
+
+    response = requests.post("http://127.0.0.1:5000/send",
+                             json={"username": username, "text": text})
